@@ -7,7 +7,7 @@ const AllImages = () => {
     const [search, setSearchText] = useState("");
 
     useEffect(() => {
-        fetch(`http://localhost:5000/allCars`)
+        fetch(`https://anivale-task-server.vercel.app/allCars`)
             .then(res => res.json())
             .then(data => {
                 //console.log('data', data)
@@ -17,7 +17,7 @@ const AllImages = () => {
 
     const handleSearch = (event) => {
         event.preventDefault();
-        fetch(`http://localhost:5000/getCarsByName/${search}`)
+        fetch(`https://anivale-task-server.vercel.app/getCarsByName/${search}`)
             .then(res => res.json())
             .then(data => {
                 console.log('src data', data)
